@@ -88,6 +88,7 @@ class PageplannerStoryBuilder implements PageplannerStoryBuilderInterface {
     switch ($destination_field) {
       case 'title':
       case 'body':
+      case 'abstract':
         $isHtml = $this->isFormattedField($field_definition);
 
         if ($isHtml) {
