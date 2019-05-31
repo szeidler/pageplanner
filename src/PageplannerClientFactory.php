@@ -36,10 +36,10 @@ class PageplannerClientFactory {
   public function createFromConfig() {
     $config = $this->configFactory->get('pageplanner.settings');
     $client_configuration = [
-      'baseUrl' => 'https://preportal.pageplanner.no/api-demo/api/',
-      'access_token_url' => 'https://login.microsoftonline.com/pageplannersolutions.com/oauth2/token',
-      'client_id' => '5500358d-11d9-4ebe-8c78-1df551d120d7',
-      'client_secret' => 'c}#7;TJflVbR)qg({#5j}_!QfubU+E(9r!gS#^}%3V]a.2ojz',
+      'baseUrl' => $config->get('base_url'),
+      'access_token_url' => $config->get('access_token_url'),
+      'client_id' => $config->get('client_id'),
+      'client_secret' => $config->get('client_secret'),
     ];
 
     $client = new PageplannerClient($client_configuration);
