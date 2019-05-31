@@ -1,0 +1,9 @@
+node.type.*.third_party.pageplanner:
+  type: config_entity
+  label: 'Pageplanner'
+  mapping:
+    field_map:
+      type: sequence
+      label: 'Field map'
+      sequence:
+        type: string

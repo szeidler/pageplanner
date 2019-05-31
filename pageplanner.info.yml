@@ -1,0 +1,5 @@
+name: 'Pageplanner'
+type: module
+description: 'Export articles to the Pageplanner API.'
+core: 8.x
+configure: pageplanner.settings

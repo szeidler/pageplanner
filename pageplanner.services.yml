@@ -1,0 +1,13 @@
+services:
+  pageplanner.manager:
+    class: Drupal\pageplanner\PageplannerManager
+    arguments: ['@entity_field.manager']
+  pageplanner.client:
+    class: szeidler\Pageplanner\PageplannerClient
+    factory: pageplanner.client_factory:createFromConfig
+  pageplanner.client_factory:
+    class: Drupal\pageplanner\PageplannerClientFactory
+    arguments: ['@config.factory']
+  pageplanner.story_json_builder:
+    class: Drupal\pageplanner\PageplannerStoryBuilder
+    arguments: ['@entity_type.manager', '@entity_field.manager']

@@ -1,0 +1,16 @@
+{
+  "name": "drupal/pageplanner",
+  "type": "drupal-module",
+  "description": "Export articles to the Pageplanner API.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/pageplanner",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/pageplanner",
+    "source": "http://cgit.drupalcode.org/pageplanner"
+  },
+  "require": {
+    "szeidler/pageplanner-php-sdk": "^1.0"
+  }
+}

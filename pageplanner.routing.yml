@@ -1,0 +1,30 @@
+pageplanner.pageplanner_export.choose_destination:
+  path: '/pageplanner/export/choose-destination/{entity_type}/{entity}'
+  defaults:
+    _controller: '\Drupal\pageplanner\Controller\ExportController::chooseDestination'
+    _title: 'Pageplanner Export: Choose destination'
+  options:
+    parameters:
+      entity:
+        type: entity:{entity_type}
+  requirements:
+    _permission: 'export to pageplanner'
+
+
+pageplanner.pageplanner_export.preview:
+  path: '/pageplanner/export/preview'
+  defaults:
+    _controller: '\Drupal\pageplanner\Controller\ExportController::preview'
+    _title: 'Pageplanner Export: Preview'
+  requirements:
+    _permission: 'export to pageplanner'
+
+
+pageplanner.pageplanner_export.process:
+  path: '/pageplanner/export/process'
+  defaults:
+    _controller: '\Drupal\pageplanner\Controller\ExportController::process'
+    _title: 'Pageplanner Export: Preview'
+  requirements:
+    _permission: 'export to pageplanner'
+    _custom_access:  '\Drupal\pageplanner\Controller\ExportController::readyToBeExported'
