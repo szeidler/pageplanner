@@ -231,7 +231,7 @@ class ExportController extends ControllerBase {
     $entity = $this->getEntityFromStorage();
     $data = $this->storyJsonBuilder->build($entity);
     $response = $this->client->createStory($data);
-    $pageplanner_id = $response->offsetGet('id');
+    $pageplanner_id = (string) $response->toArray();
 
     $this->messenger()
       ->addStatus($this->t('The article was exported successfully to Pageplanner. Pageplanner story id: @pageplanner_id', ['@pageplanner_id' => $pageplanner_id]));
