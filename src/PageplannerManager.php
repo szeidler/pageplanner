@@ -54,7 +54,7 @@ class PageplannerManager {
    */
   public function providedFields() {
     return [
-      'id' => $this->t('ID'),
+      'sourceId' => $this->t('ID'),
       'title' => $this->t('Title'),
       'abstract' => $this->t('Abstract'),
       'body' => $this->t('Body'),
